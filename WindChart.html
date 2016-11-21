@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">			
+    <title>China Wind Chart</title>
+    <link rel="stylesheet" href="./WindChart_files/style.css">
+    <link rel="stylesheet" href="./WindChart_files/svg.css">
+	</head>
+	<style>   
+		.province {
+		stroke: white;
+		stroke-width: 0.2px;
+		}
+		.route {
+		stroke: white;
+		stroke-width: 3px;
+		fill: white;
+		}
+	</style>
+
+	<body>
+		<div id="chart">
+		</div>
+		<script src="./WindChart_files/d3.v3.min.js"></script>
+		<script src="./WindChart_files/topojson.v1.min.js"></script>
+		<script src="./WindChart_files/jquery-1.9.1.min.js"></script>
+		<script src="./WindChart_files/china-data.js"></script>
+		
+		<script src="./WindChart_files/main.js"></script>
+		<button id="month" type="button">Click Me!</button>
+		<button id="time" type="button">try another</button>
+		<button id="three" type="button">without param</button>
+<script>
+
+        var btn_wind = document.getElementById('month');
+         btn_wind.onclick = function(){
+         change_lines(0,0,1,5);	
+        };
+
+</script>
+<script>
+        var btn_wind = document.getElementById('time');
+         btn_wind.onclick = function(){
+         change_lines(1,0,0,2);	
+        };
+
+</script>
+<script>
+
+        var btn_wind = document.getElementById('three');
+         btn_wind.onclick = function(){
+         change_lines(1,1,0);	
+        };
+</script>
+
+	</body>
+</html>
